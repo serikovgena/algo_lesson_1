@@ -11,14 +11,12 @@ namespace lesson_1
         
         static void ShowNumberPrimerIs()
         {
-            for (int i = 0; i < 100; i++)
+            var primes = Number.GetAllPrimeNumbersInFirstHundred();
+            foreach(var primeNumber in primes)
             {
-                if(Number.IsPrime(i))
-                {
-                    Console.Write($"{i} ");
-                }            
+                Console.Write($"{primeNumber} ");
             }
-          
         }
+
     }
 }
