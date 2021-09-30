@@ -4,9 +4,21 @@ namespace lesson_1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            ShowNumberPrimerIs();
+        }
+        
+        static void ShowNumberPrimerIs()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                if(Number.IsPrime(i))
+                {
+                    Console.Write($"{i} ");
+                }            
+            }
+          
         }
     }
 }
