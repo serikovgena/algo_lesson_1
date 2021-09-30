@@ -7,7 +7,7 @@ namespace lesson_1
     {
         static void Main()
         {
-            // ShowNumberPrimerIs();
+            ShowNumberPrimerIs();
             ShowFibonachi();
         }
         
