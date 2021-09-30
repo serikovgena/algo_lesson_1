@@ -4,12 +4,21 @@
     {
         public override int GetNumberByOrdinal(int number)
         {
-            int result = 0;
-            for (int i = 0; i <= number; i++)
+            if (number <= 1) return 0;
+            if (number == 2) return 1;
+            else
             {
-                result = result + i;
+                int result = 0;
+                int a = 0;
+                int b = 1;
+                for (int i = 2; i < number; i++)
+                {
+                    result = a + b;
+                    a = b;
+                    b = result;
+                }  
+                return result;
             }
-            return result;
         }
     }
 }

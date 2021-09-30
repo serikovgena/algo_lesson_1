@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lesson_1.Fibonachi;
+using System;
 
 namespace lesson_1
 {
@@ -6,7 +7,8 @@ namespace lesson_1
     {
         static void Main()
         {
-            ShowNumberPrimerIs();
+            // ShowNumberPrimerIs();
+            ShowFibonachi();
         }
         
         static void ShowNumberPrimerIs()
@@ -18,9 +20,20 @@ namespace lesson_1
             }
         }
 
-        static void FIbanochi()
+        static void ShowFibonachi()
         {
+            var factory = new FibonachiFactory();
+            var generator = factory.Create(FibonachiAlgorithm.Recursion);
 
+            for (int n = 1; n < 10; n++)
+                Console.Write($"{generator.GetNumberByOrdinal(n)} ");
+            
+            Console.WriteLine();
+            
+            generator = factory.Create(FibonachiAlgorithm.Loop);
+
+            for (int n = 1; n < 10; n++)
+                Console.Write($"{generator.GetNumberByOrdinal(n)} ");
         }
     }
 }

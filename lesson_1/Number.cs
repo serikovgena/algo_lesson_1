@@ -2,7 +2,7 @@
 
 namespace lesson_1
 {
-    internal static class Number
+    public static class Number
     {
         static public bool IsPrime(int number) => HowManyDivisorsIn(number) == 2;
        

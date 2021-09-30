@@ -2,16 +2,9 @@
 
 namespace lesson_1.Fibonachi
 {
-    class FibonachiFactory
+   public class FibonachiFactory
     {
-        FibonachiAlgorithm algorithm { get; init; }
-
-        public FibonachiFactory(FibonachiAlgorithm algorithm)
-        {
-            this.algorithm = algorithm;
-        }
-
-        public FibonachiBase Create()
+        public FibonachiBase Create(FibonachiAlgorithm algorithm)
         {
             FibonachiBase result = algorithm switch
             {
